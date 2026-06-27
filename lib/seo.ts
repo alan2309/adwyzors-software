@@ -25,9 +25,9 @@ export function generateMetadata({
         twitter: { card: "summary_large_image", title, description, images: [image] },
         robots: noindex ? { index: false, follow: false } : { index: true, follow: true },
         icons: {
-            icon: "/logo.png",
-            shortcut: "/logo.png",
-            apple: "/logo.png",
+            icon: "/icon",
+            shortcut: "/icon",
+            apple: "/icon",
         },
     };
 }
