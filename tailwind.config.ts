@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "var(--bg)",
-        ink: "var(--ink)",
-        accent: "var(--accent)",
-        line: "var(--line)",
-        muted: "var(--muted)",
+        bg: "#FAFAFA",
+        ink: "#111827",
+        accent: "#2563EB",
+        primary: "#2563EB",
+        line: "#E5E7EB",
+        muted: "#6B7280",
         success: "#10B981",
         background: "var(--background)",
         foreground: "var(--foreground)",

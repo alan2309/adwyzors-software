@@ -41,7 +41,7 @@ export default function TermsPage() {
             },
             {
               title: "6. Governing law",
-              body: "These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of courts in [City].",
+              body: "These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of courts in Mumbai.",
             },
           ].map((s) => (
             <div key={s.title}>

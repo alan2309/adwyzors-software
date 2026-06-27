@@ -3,6 +3,7 @@ import { generateMetadata } from "@/lib/seo";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { blogPosts } from "@/lib/constants";
 
 export const metadata: Metadata = generateMetadata({
   title: "Insights — Business automation, ERP, and digitization",
@@ -10,63 +11,6 @@ export const metadata: Metadata = generateMetadata({
     "Practical insights on business automation, custom ERP, inventory management, workflow redesign, and digitization for Indian SMEs.",
   path: "/blog",
 });
-
-const posts = [
-  {
-    slug: "why-off-the-shelf-erp-fails-sme",
-    category: "ERP",
-    title: "Why off-the-shelf ERP fails Indian SMEs (and what to do instead)",
-    excerpt:
-      "Most ERPs force your business to adapt to their workflow. For businesses with unique processes, that's a recipe for shelfware.",
-    readTime: "8 min",
-    date: "Jun 20, 2026",
-  },
-  {
-    slug: "registers-to-realtime",
-    category: "Digitization",
-    title: "From registers to real-time: a playbook for first-time digitization",
-    excerpt:
-      "If your business runs on paper, don't start with software. Start with a process audit. Here's the exact framework we use.",
-    readTime: "12 min",
-    date: "Jun 12, 2026",
-  },
-  {
-    slug: "inventory-accuracy-99",
-    category: "Inventory",
-    title: "How to move from 82% to 99.6% inventory accuracy in 90 days",
-    excerpt:
-      "A practical guide to cycle counting, bin locations, barcode scanning, and the process changes that make technology stick.",
-    readTime: "10 min",
-    date: "Jun 03, 2026",
-  },
-  {
-    slug: "garment-piece-rate-payroll",
-    category: "Garments",
-    title: "The hidden cost of manual piece-rate payroll in garment factories",
-    excerpt:
-      "We analyzed 12 garment factories. The average factory spends 8 days per month on payroll. Here's how to cut it to hours.",
-    readTime: "9 min",
-    date: "May 25, 2026",
-  },
-  {
-    slug: "wholesale-credit-control",
-    category: "Wholesale",
-    title: "Hard vs soft credit control: what actually reduces overdue receivables",
-    excerpt:
-      "We tested both approaches across 18 wholesale distributors. The results surprised even us.",
-    readTime: "7 min",
-    date: "May 18, 2026",
-  },
-  {
-    slug: "warehouse-slotting",
-    category: "Warehouses",
-    title: "Velocity-based slotting is not enough: the case for affinity slotting",
-    excerpt:
-      "Most WMS implementations slot by velocity alone. But items ordered together should live together. Here's the math.",
-    readTime: "11 min",
-    date: "May 10, 2026",
-  },
-];
 
 export default function BlogPage() {
   return (
@@ -92,7 +36,7 @@ export default function BlogPage() {
 
       <Section className="!pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((p) => (
+          {blogPosts.map((p) => (
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
