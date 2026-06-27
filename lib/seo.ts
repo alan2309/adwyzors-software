@@ -24,6 +24,11 @@ export function generateMetadata({
         openGraph: { title, description, url, images: [{ url: image, width: 1200, height: 630 }] },
         twitter: { card: "summary_large_image", title, description, images: [image] },
         robots: noindex ? { index: false, follow: false } : { index: true, follow: true },
+        icons: {
+            icon: "/logo.png",
+            shortcut: "/logo.png",
+            apple: "/logo.png",
+        },
     };
 }
 
