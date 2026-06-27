@@ -234,7 +234,7 @@ export default function SolutionsPage() {
               Start a conversation
             </Button>
             <Button
-              href="/work"
+              href="/portfolio"
               size="lg"
               variant="outline"
               className="border-bg/20 text-bg hover:bg-bg/10"
