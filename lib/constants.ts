@@ -7,8 +7,8 @@ export const siteConfig = {
     whatsapp: "+918169709842",
     address: "India",
     social: {
-        linkedin: "https://linkedin.com/company/adwyzors",
-        twitter: "https://twitter.com/adwyzors",
+        linkedin: "https://www.linkedin.com/in/alankrit-arya/",
+        twitter: "https://www.linkedin.com/in/alankrit-arya/",
     },
 };
 
@@ -39,10 +39,10 @@ export const services = [
             "Real-time dashboards for owners",
             "Role-based access & audit trails",
             "Automated workflows & approvals",
-            "Integration with Tally, GST, banks",
+            "Integration with your existing systems",
         ],
         industries: ["Manufacturing", "Wholesale", "Distribution", "Garments"],
-        timeline: "12–20 weeks",
+        timeline: "5–20 weeks",
     },
     {
         slug: "inventory-management",
@@ -64,7 +64,7 @@ export const services = [
             "Stock valuation (FIFO, Weighted Avg)",
         ],
         industries: ["Warehouses", "Retail", "Wholesale", "Manufacturing"],
-        timeline: "8–14 weeks",
+        timeline: "8–10 weeks",
     },
     {
         slug: "warehouse-management",
@@ -86,7 +86,7 @@ export const services = [
             "Labor productivity & KPI dashboards",
         ],
         industries: ["3PL", "E-commerce", "Distribution", "Manufacturing"],
-        timeline: "14–22 weeks",
+        timeline: "5-10 weeks",
     },
     {
         slug: "sales-crm",
@@ -130,7 +130,7 @@ export const services = [
             "Piece-rate & operator-wise wage engine",
         ],
         industries: ["Garment Manufacturing", "Export Houses", "Job Work"],
-        timeline: "16–24 weeks",
+        timeline: "15–20 weeks",
     },
     {
         slug: "employee-management",
@@ -378,8 +378,8 @@ export const processSteps = [
 export const portfolio = [
     {
         slug: "garment-erp",
-        client: "Leading Garment Export House",
-        industry: "Garment Manufacturing",
+        client: "O'Baby",
+        industry: "Garment Manufacturing and B2B Wholesaler",
         title: "From registers to real-time — a 400-operator garment factory, digitized.",
         summary:
             "Replaced 14 paper registers and 23 Excel sheets with a unified Garment ERP covering style-to-ship.",
@@ -390,12 +390,13 @@ export const portfolio = [
         solution:
             "Built a unified Garment ERP covering Style → BOM → Cutting → Stitching → Finishing → Packing → Shipping with integrated piece-rate payroll.",
         modules: ["Style & BOM", "Cutting Plan", "Bundle Tracking", "Stitching Line", "Piece-Rate Payroll", "Shipping"],
-        tech: ["Next.js", "PostgreSQL", "Redis", "Docker", "AWS"],
+        tech: ["Next.js", "PostgreSQL", "Docker", "AWS"],
         impact: [
             { metric: "Month-close time", before: "12 days", after: "2 days" },
             { metric: "Fabric wastage", before: "6.2%", after: "3.8%" },
             { metric: "Payroll processing", before: "8 days", after: "6 hours" },
             { metric: "On-time dispatch", before: "71%", after: "94%" },
+            { metric: "Inventory Tracking", before: "2 days", after: "2 mins" },
         ],
         lessons:
             "The biggest win wasn't the software — it was redesigning the bundle-tracking workflow. Software amplified a better process.",
@@ -426,11 +427,11 @@ export const portfolio = [
     },
     {
         slug: "inventory-crm",
-        client: "Wholesale Distributor",
-        industry: "Wholesale Distribution",
-        title: "A 30-year-old wholesale business, off Excel, in 14 weeks.",
+        client: "Sky Prints",
+        industry: "Wholesale Distribution and Printing Company",
+        title: "A 30-year-old wholesale printing business, off Excel, in 14 weeks.",
         summary:
-            "Unified inventory, sales, credit, and collection into a single system — with Tally integration.",
+            "Unified inventory, production management, sales, credit, and collection into a single system — with Tally integration.",
         problem:
             "A family-run wholesale distributor with 28 years of history ran on Tally + 14 Excel sheets + 3 WhatsApp groups. Credit limits were advisory, not enforced.",
         analysis:
@@ -440,7 +441,7 @@ export const portfolio = [
         modules: ["Inventory", "CRM", "Credit Control", "Scheme Engine", "Route Sales", "Tally Sync"],
         tech: ["Next.js", "PostgreSQL", "BullMQ", "Tally API"],
         impact: [
-            { metric: "Overdue receivables", before: "₹2.4 Cr", after: "₹0.7 Cr" },
+            { metric: "Overdue receivables", before: "₹2.4 Cr", after: "₹0.2 Cr" },
             { metric: "Order-to-dispatch", before: "36 hrs", after: "9 hrs" },
             { metric: "Month-close", before: "9 days", after: "2 days" },
             { metric: "Scheme calculation errors", before: "~8%", after: "0%" },
@@ -517,58 +518,58 @@ export const faqs = [
 ];
 
 export const blogPosts = [
-  {
-    slug: "why-off-the-shelf-erp-fails-sme",
-    category: "ERP",
-    title: "Why off-the-shelf ERP fails Indian SMEs (and what to do instead)",
-    excerpt:
-      "Most ERPs force your business to adapt to their workflow. For businesses with unique processes, that's a recipe for shelfware.",
-    readTime: "8 min",
-    date: "Jun 20, 2026",
-  },
-  {
-    slug: "registers-to-realtime",
-    category: "Digitization",
-    title: "From registers to real-time: a playbook for first-time digitization",
-    excerpt:
-      "If your business runs on paper, don't start with software. Start with a process audit. Here's the exact framework we use.",
-    readTime: "12 min",
-    date: "Jun 12, 2026",
-  },
-  {
-    slug: "inventory-accuracy-99",
-    category: "Inventory",
-    title: "How to move from 82% to 99.6% inventory accuracy in 90 days",
-    excerpt:
-      "A practical guide to cycle counting, bin locations, barcode scanning, and the process changes that make technology stick.",
-    readTime: "10 min",
-    date: "Jun 03, 2026",
-  },
-  {
-    slug: "garment-piece-rate-payroll",
-    category: "Garments",
-    title: "The hidden cost of manual piece-rate payroll in garment factories",
-    excerpt:
-      "We analyzed 12 garment factories. The average factory spends 8 days per month on payroll. Here's how to cut it to hours.",
-    readTime: "9 min",
-    date: "May 25, 2026",
-  },
-  {
-    slug: "wholesale-credit-control",
-    category: "Wholesale",
-    title: "Hard vs soft credit control: what actually reduces overdue receivables",
-    excerpt:
-      "We tested both approaches across 18 wholesale distributors. The results surprised even us.",
-    readTime: "7 min",
-    date: "May 18, 2026",
-  },
-  {
-    slug: "warehouse-slotting",
-    category: "Warehouses",
-    title: "Velocity-based slotting is not enough: the case for affinity slotting",
-    excerpt:
-      "Most WMS implementations slot by velocity alone. But items ordered together should live together. Here's the math.",
-    readTime: "11 min",
-    date: "May 10, 2026",
-  },
+    {
+        slug: "why-off-the-shelf-erp-fails-sme",
+        category: "ERP",
+        title: "Why off-the-shelf ERP fails Indian SMEs (and what to do instead)",
+        excerpt:
+            "Most ERPs force your business to adapt to their workflow. For businesses with unique processes, that's a recipe for shelfware.",
+        readTime: "8 min",
+        date: "Jun 20, 2026",
+    },
+    {
+        slug: "registers-to-realtime",
+        category: "Digitization",
+        title: "From registers to real-time: a playbook for first-time digitization",
+        excerpt:
+            "If your business runs on paper, don't start with software. Start with a process audit. Here's the exact framework we use.",
+        readTime: "12 min",
+        date: "Jun 12, 2026",
+    },
+    {
+        slug: "inventory-accuracy-99",
+        category: "Inventory",
+        title: "How to move from 82% to 99.6% inventory accuracy in 90 days",
+        excerpt:
+            "A practical guide to cycle counting, bin locations, barcode scanning, and the process changes that make technology stick.",
+        readTime: "10 min",
+        date: "Jun 03, 2026",
+    },
+    {
+        slug: "garment-piece-rate-payroll",
+        category: "Garments",
+        title: "The hidden cost of manual piece-rate payroll in garment factories",
+        excerpt:
+            "We analyzed 12 garment factories. The average factory spends 8 days per month on payroll. Here's how to cut it to hours.",
+        readTime: "9 min",
+        date: "May 25, 2026",
+    },
+    {
+        slug: "wholesale-credit-control",
+        category: "Wholesale",
+        title: "Hard vs soft credit control: what actually reduces overdue receivables",
+        excerpt:
+            "We tested both approaches across 18 wholesale distributors. The results surprised even us.",
+        readTime: "7 min",
+        date: "May 18, 2026",
+    },
+    {
+        slug: "warehouse-slotting",
+        category: "Warehouses",
+        title: "Velocity-based slotting is not enough: the case for affinity slotting",
+        excerpt:
+            "Most WMS implementations slot by velocity alone. But items ordered together should live together. Here's the math.",
+        readTime: "11 min",
+        date: "May 10, 2026",
+    },
 ];
