@@ -15,83 +15,206 @@ export function Hero() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80rem] h-[40rem] bg-gradient-to-b from-accent/5 via-transparent to-transparent blur-3xl pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line bg-white/60 backdrop-blur text-xs font-medium text-muted mb-8"
-        >
-          <span className="relative flex w-2 h-2">
-            <span className="absolute inset-0 rounded-full bg-success animate-ping opacity-75" />
-            <span className="relative rounded-full w-2 h-2 bg-success" />
-          </span>
-          Currently accepting 3 new engagements for Q3 2026
-        </motion.div>
-
-        <h1 className="font-display text-display-xl font-semibold tracking-[-0.04em] max-w-5xl">
-          <TextReveal delay={0.3}>We build software</TextReveal>{" "}
-          <TextReveal delay={0.5} className="text-muted">
-            around your business.
-          </TextReveal>
-          <br />
-          <TextReveal delay={0.7} className="italic font-medium">
-            Not the other way around.
-          </TextReveal>
-        </h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="mt-8 text-lg md:text-xl text-muted leading-relaxed max-w-2xl"
-        >
-          Adwyzors studies how you work, then engineers custom ERP, inventory, and operations
-          software that replaces your registers, Excel sheets, and WhatsApp chaos — with one
-          intelligent system.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
-        >
-          <Button href="/contact" size="lg" arrow>
-            Book a discovery call
-          </Button>
-          <Button href="/process" size="lg" variant="secondary">
-            <PlayCircle className="w-4 h-4" />
-            See how we work
-          </Button>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.6 }}
-          className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted"
-        >
-          <span className="text-xs tracking-[0.18em] uppercase">Trusted by</span>
-          {["Tiruppur Exports", "Mumbai 3PL", "Bengaluru Wholesale", "Pune Manufacturing"].map(
-            (c) => (
-              <span key={c} className="font-medium text-ink/70">
-                {c}
+        {/* Two-column: text left, live-feed right */}
+        <div className="flex flex-col md:flex-row md:items-start md:gap-12 lg:gap-20">
+          {/* ── Left column ── */}
+          <div className="flex-1 min-w-0">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line bg-white/60 backdrop-blur text-xs font-medium text-muted mb-8"
+            >
+              <span className="relative flex w-2 h-2">
+                <span className="absolute inset-0 rounded-full bg-success animate-ping opacity-75" />
+                <span className="relative rounded-full w-2 h-2 bg-success" />
               </span>
-            )
-          )}
-        </motion.div>
+              Currently accepting 3 new engagements for Q3 2026
+            </motion.div>
 
-        {/* Hero visual — animated looping dashboard */}
+            <h1 className="font-display text-display-xl font-semibold tracking-[-0.04em]">
+              <TextReveal delay={0.3}>We build software</TextReveal>{" "}
+              <TextReveal delay={0.5} className="text-muted">
+                around your business.
+              </TextReveal>
+              <br />
+              <TextReveal delay={0.7} className="italic font-medium">
+                Not the other way around.
+              </TextReveal>
+            </h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="mt-8 text-lg md:text-xl text-muted leading-relaxed max-w-xl"
+            >
+              Adwyzors studies how you work, then engineers custom ERP, inventory, and operations
+              software that replaces your registers, Excel sheets, and WhatsApp chaos — with one
+              intelligent system.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="mt-10 flex flex-wrap items-center gap-4"
+            >
+              <Button href="/contact" size="lg" arrow>
+                Book a discovery call
+              </Button>
+              <Button href="/process" size="lg" variant="secondary">
+                <PlayCircle className="w-4 h-4" />
+                See how we work
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.6 }}
+              className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted"
+            >
+              <span className="text-xs tracking-[0.18em] uppercase">Trusted by</span>
+              {["Tiruppur Exports", "Mumbai 3PL", "Bengaluru Wholesale", "Pune Manufacturing"].map(
+                (c) => (
+                  <span key={c} className="font-medium text-ink/70">
+                    {c}
+                  </span>
+                )
+              )}
+            </motion.div>
+          </div>
+
+          {/* ── Right column: Live Activity Feed ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden md:block w-80 lg:w-96 shrink-0 mt-8 md:mt-16"
+          >
+            <LiveActivityFeed />
+          </motion.div>
+        </div>
+
+        {/* Hero visual — animated looping dashboard — full width below */}
         <motion.div
           initial={{ opacity: 0, y: 60, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.2, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 relative"
+          className="mt-16 relative"
         >
           <HeroVisual />
         </motion.div>
       </div>
     </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   LIVE ACTIVITY FEED
+   A looping stream of ERP events that adds a new
+   notification every ~2s and auto-removes old ones
+───────────────────────────────────────────── */
+
+const ACTIVITY_POOL = [
+  { icon: "📦", color: "#34d399", title: "Inventory synced", body: "4,218 SKUs · Tiruppur warehouse", time: "just now" },
+  { icon: "✅", color: "#60a5fa", title: "Order dispatched", body: "#ORD-4821 → Mumbai 3PL", time: "2s ago" },
+  { icon: "🚨", color: "#f87171", title: "Low stock alert", body: "Cotton Grey 60s — 12 bales left", time: "5s ago" },
+  { icon: "💳", color: "#a78bfa", title: "Payment received", body: "₹2,14,000 · Bengaluru Wholesale", time: "12s ago" },
+  { icon: "🔄", color: "#fbbf24", title: "Reorder triggered", body: "Auto-PO #PO-0091 created", time: "18s ago" },
+  { icon: "📊", color: "#34d399", title: "Daily report ready", body: "Dispatch variance: −3.2%", time: "32s ago" },
+  { icon: "🚚", color: "#60a5fa", title: "Shipment in transit", body: "Truck TN-09-AX-1234 · ETA 4h", time: "1m ago" },
+  { icon: "⚙️", color: "#a78bfa", title: "Production batch done", body: "Batch #B-2291 · 840 units", time: "2m ago" },
+];
+
+type Activity = (typeof ACTIVITY_POOL)[number] & { id: number };
+
+let _uid = 0;
+
+function LiveActivityFeed() {
+  const [items, setItems] = useState<Activity[]>(() =>
+    ACTIVITY_POOL.slice(0, 4).map((a, i) => ({ ...a, id: i }))
+  );
+
+  useEffect(() => {
+    let poolIdx = 4 % ACTIVITY_POOL.length;
+    const timer = setInterval(() => {
+      const next = { ...ACTIVITY_POOL[poolIdx % ACTIVITY_POOL.length], id: ++_uid, time: "just now" };
+      poolIdx = (poolIdx + 1) % ACTIVITY_POOL.length;
+      setItems((prev) => {
+        const updated = [next, ...prev].slice(0, 5);
+        // Bump older timestamps
+        return updated.map((item, i) => ({
+          ...item,
+          time: i === 0 ? "just now" : i === 1 ? "2s ago" : i === 2 ? "8s ago" : i === 3 ? "20s ago" : "45s ago",
+        }));
+      });
+    }, 2400);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div
+      className="rounded-2xl border border-line bg-white/80 backdrop-blur-sm shadow-elevated overflow-hidden"
+      style={{ boxShadow: "0 12px 40px -8px rgba(0,0,0,0.08), 0 2px 8px -2px rgba(0,0,0,0.04)" }}
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 py-3 border-b border-line bg-bg/60">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
+          <span className="text-xs font-semibold text-ink/80 font-mono tracking-wide">Live activity</span>
+        </div>
+        <span className="text-[10px] text-muted font-mono bg-ink/5 px-2 py-0.5 rounded-full">
+          {items.length} events
+        </span>
+      </div>
+
+      {/* Feed */}
+      <div className="divide-y divide-line/60 overflow-hidden">
+        {items.map((item, i) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: -12, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="flex items-start gap-3 px-4 py-3"
+            style={{ opacity: i === 0 ? 1 : i === 1 ? 0.9 : i === 2 ? 0.75 : i === 3 ? 0.55 : 0.4 }}
+          >
+            {/* Icon bubble */}
+            <div
+              className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm mt-0.5"
+              style={{ background: `${item.color}18`, border: `1px solid ${item.color}30` }}
+            >
+              {item.icon}
+            </div>
+            {/* Text */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-semibold text-ink truncate">{item.title}</span>
+                <span className="text-[10px] text-muted font-mono shrink-0">{item.time}</span>
+              </div>
+              <p className="text-[11px] text-muted mt-0.5 truncate">{item.body}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Footer pulse bar */}
+      <div className="px-4 py-2.5 border-t border-line/60 bg-bg/40">
+        <div className="flex items-center gap-2">
+          <div className="flex-1 h-1 rounded-full bg-line overflow-hidden">
+            <motion.div
+              className="h-full rounded-full bg-accent"
+              animate={{ x: ["-100%", "100%"] }}
+              transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+              style={{ width: "40%" }}
+            />
+          </div>
+          <span className="text-[10px] text-muted font-mono">streaming</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -102,6 +225,7 @@ export function Hero() {
    Phase 2 (6-10s): Live dashboard with counting metrics
    Loop back
 ───────────────────────────────────────────── */
+
 
 const PHASE_DURATION = [3500, 3000, 4000]; // ms per phase
 const TOTAL = PHASE_DURATION.reduce((a, b) => a + b, 0);
